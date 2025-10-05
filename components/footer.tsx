@@ -1,17 +1,16 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin, Import } from "lucide-react"
+import Image from "next/image";
+import Logo from '../public/logo.png'
+
 
 const brandLogos = [
-  { name: "Bosch", src: "/bosch-logo.png" },
-  { name: "Continental", src: "/continental-logo.jpg" },
-  { name: "Mahle", src: "/mahle-logo.jpg" },
-  { name: "Sachs", src: "/sachs-logo.jpg" },
-  { name: "Valeo", src: "/valeo-logo.png" },
-  { name: "Denso", src: "/denso-logo.png" },
-  { name: "NGK", src: "/ngk-logo.png" },
-  { name: "Brembo", src: "/brembo-logo.png" },
+ { name: "Aequipe", src: "/marcas/marca_aequipe.png" },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.png" },
+  { name: "Oxion", src: "/marcas/marca_oxion.png" },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.png" },
 ]
 
 const socialLinks = [
@@ -35,9 +34,14 @@ export function Footer() {
             className="space-y-4"
           >
             {/* Company Logo */}
-            <div className="bg-primary px-4 py-2 rounded-lg inline-block">
-              <span className="text-primary-foreground font-bold text-2xl font-sans">BALSAMO</span>
-            </div>
+            <div className="bg-primary px-4 py-2 rounded-lg flex items-center justify-center">
+      <Image
+        src={Logo}
+        alt="Logo BALSAMO"
+        className="object-contain h-6 lg:h-8 w-auto"
+        priority
+      />
+    </div>
             <p className="text-slate-300 text-sm leading-relaxed">
               Líder en autopartes con más de 25 años de experiencia, ofreciendo repuestos de calidad para todo tipo de
               vehículos en toda Argentina.
@@ -57,18 +61,18 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
                 <div className="text-slate-300 text-sm">
-                  <p>Av. Corrientes 1234</p>
-                  <p>Buenos Aires, Argentina</p>
-                  <p>C1043AAZ</p>
+                  <p>Av. Circunvalación y Rancagua </p>
+                  <p>Córdoba - Argentina</p>
+                  <p>CP 5012</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-secondary flex-shrink-0" />
-                <span className="text-slate-300 text-sm">+54 11 4567-8900</span>
+                <span className="text-slate-300 text-sm">(54 351) 492 9000</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-secondary flex-shrink-0" />
-                <span className="text-slate-300 text-sm">info@balsamo.com.ar</span>
+                <span className="text-slate-300 text-sm">balsamo@balsamo.com.ar</span>
               </div>
             </div>
           </motion.div>
@@ -141,7 +145,7 @@ export function Footer() {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     whileHover={{ scale: 1.05 }}
                     viewport={{ once: true }}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-2 hover:bg-white/20 transition-colors duration-200"
+                    className="bg-white backdrop-blur-sm rounded-lg p-2 hover:bg-white/20 transition-colors duration-200"
                   >
                     <img
                       src={brand.src || "/placeholder.svg"}

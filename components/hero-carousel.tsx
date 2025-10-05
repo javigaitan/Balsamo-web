@@ -88,7 +88,7 @@ export function HeroCarousel() {
       </AnimatePresence>
 
       {/* Navigation Controls */}
-      <div className="absolute inset-0 flex items-center justify-between px-4 lg:px-8 pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-between px-4 lg:px-8 pointer-events-none z-20">
         <Button
           variant="outline"
           size="icon"
@@ -300,26 +300,7 @@ function SvgTextSlide({ slide }: { slide: any }) {
                 fill="hsl(var(--foreground))"
               />
 
-              {/* Gear icons around the car */}
-              {[...Array(6)].map((_, i) => (
-                <motion.g
-                  key={i}
-                  initial={{ scale: 0, rotate: 0 }}
-                  animate={{ scale: 1, rotate: 360 }}
-                  transition={{
-                    duration: 1,
-                    delay: 1.6 + i * 0.1,
-                    rotate: { duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "linear" },
-                  }}
-                  transform={`translate(${150 + Math.cos((i * Math.PI) / 3) * 100}, ${200 + Math.sin((i * Math.PI) / 3) * 80})`}
-                >
-                  <circle r="15" fill="hsl(var(--secondary))" opacity="0.8" />
-                  <path
-                    d="M-8,-8 L8,-8 L8,8 L-8,8 Z M-8,-12 L8,-12 L8,-8 L-8,-8 Z M-8,8 L8,8 L8,12 L-8,12 Z M-12,-8 L-8,-8 L-8,8 L-12,8 Z M8,-8 L12,-8 L12,8 L8,8 Z"
-                    fill="white"
-                  />
-                </motion.g>
-              ))}
+          
             </svg>
           </motion.div>
         </div>

@@ -120,17 +120,18 @@ export function ContactSection() {
                 {
                   icon: MapPin,
                   title: "Dirección",
-                  content: "Av. Corrientes 1234, CABA, Argentina",
+                  content: "Av. Circunvalación y Rancagua CP (5012) Córdoba - Argentina",
                 },
                 {
                   icon: Phone,
                   title: "Teléfono",
-                  content: "+54 11 4567-8900",
+                  content: "(54 351) 492 9000",
+                  
                 },
                 {
                   icon: Mail,
                   title: "Email",
-                  content: "info@balsamoautopartes.com.ar",
+                  content: "balsamo@balsamo.com.ar",
                 },
                 {
                   icon: Clock,
