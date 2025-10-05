@@ -4,8 +4,8 @@ import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
 const brands = [
-  { name: "Bosch", logo: "/bosch-logo.png" },
-  { name: "Continental", logo: "/continental-logo.jpg" },
+  { name: "Warehouse", logo: "/sub-marcas/auto-parts-warehouse-video.jpg" },
+  { name: "Bosch", logo: "/sub-marcas/bosch-logo.png" },
   { name: "Mahle", logo: "/mahle-logo.jpg" },
   { name: "Sachs", logo: "/sachs-logo.jpg" },
   { name: "Valeo", logo: "/valeo-logo.png" },
@@ -66,7 +66,7 @@ export function BrandsCarousel() {
                 x: {
                   repeat: Number.POSITIVE_INFINITY,
                   repeatType: "loop",
-                  duration: 30,
+                  duration: 400,
                   ease: "linear",
                 },
               }}
