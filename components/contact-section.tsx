@@ -157,19 +157,24 @@ export function ContactSection() {
               ))}
             </div>
 
-            {/* Map Placeholder */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="bg-muted/30 rounded-2xl h-64 flex items-center justify-center"
-            >
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-muted-foreground">Mapa interactivo</p>
-                <p className="text-sm text-muted-foreground">Av. Corrientes 1234, CABA</p>
-              </div>
-            </motion.div>
+            {/* Google Maps Embed */}
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+  className="overflow-hidden rounded-2xl h-64 w-full"
+>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.9725444949636!2d-64.14797741534913!3d-31.360858274089306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432977f8fc90643%3A0xbc550f60771f1324!2sMayorista%20B%C3%A1lsamo%20SA!5e0!3m2!1ses-419!2sar!4v1759641470168!5m2!1ses-419!2sar"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</motion.div>
+
           </motion.div>
 
           {/* Contact Form */}
