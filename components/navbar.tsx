@@ -4,12 +4,15 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image";
+
+import Logo from '../public/logo.png'
 
 const brandLogos = [
-  { name: "Bosch", src: "/bosch-logo.png" },
-  { name: "Continental", src: "/continental-logo.jpg" },
-  { name: "Mahle", src: "/mahle-logo.jpg" },
-  { name: "Sachs", src: "/sachs-logo.jpg" },
+  { name: "Aequipe", src: "/marcas/marca_aequipe.png" },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.png" },
+  { name: "Oxion", src: "/marcas/marca_oxion.png" },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.png" },
 ]
 
 export function Navbar() {
@@ -44,9 +47,14 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0">
-            <div className="bg-primary px-4 py-2 rounded-lg">
-              <span className="text-primary-foreground font-bold text-xl lg:text-2xl font-sans">BALSAMO</span>
-            </div>
+         <div className="bg-primary px-4 py-2 rounded-lg flex items-center justify-center">
+      <Image
+        src={Logo}
+        alt="Logo BALSAMO"
+        className="object-contain h-6 lg:h-8 w-auto"
+        priority
+      />
+    </div>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -143,21 +143,7 @@ export function StatsSection() {
           ))}
         </div>
 
-        {/* Additional Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-foreground mb-4">Compromiso con la Excelencia</h3>
-            <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Cada número representa nuestro compromiso inquebrantable con la calidad, la innovación y la satisfacción
-              del cliente. Seguimos creciendo para ofrecerte las mejores soluciones en autopartes.
-            </p>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )
