@@ -10,21 +10,21 @@ const stats = [
     icon: Package,
     number: 50000,
     suffix: "+",
-    label: "Repuestos Disponibles",
-    description: "Amplio stock de repuestos originales y alternativos",
+    label: "Referencias Disponibles",
+    description: "Amplio stock de repuestos para Renault, Volkswagen y Nissan",
   },
   {
     id: 2,
     icon: Calendar,
-    number: 25,
+    number: 50,
     suffix: "+",
     label: "Años de Experiencia",
-    description: "Más de dos décadas en el mercado automotriz",
+    description: "Más de medio siglo en el mercado de autoparte",
   },
   {
     id: 3,
     icon: MapPin,
-    number: 95,
+    number: 100,
     suffix: "%",
     label: "Cobertura Nacional",
     description: "Presencia en todo el territorio argentino",
@@ -32,10 +32,10 @@ const stats = [
   {
     id: 4,
     icon: TrendingUp,
-    number: 1000,
-    suffix: "+",
-    label: "Clientes Satisfechos",
-    description: "Talleres y distribuidores que confían en nosotros",
+    number: 4,
+    suffix: "",
+    label: "Marcas Propias",
+    description: "Aequipe, Kreisen, Tajiro y Oxion",
   },
 ]
 
@@ -104,10 +104,10 @@ export function StatsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
-            Números que Hablan por Nosotros
+            Especialista en autopartes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-            Más de dos décadas de experiencia nos respaldan como líderes en el mercado de autopartes
+Lideres en la especializacion de autopartes para vehiculos Renault, Volkswagen y Nissan
           </p>
         </motion.div>
 

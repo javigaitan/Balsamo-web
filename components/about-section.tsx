@@ -2,24 +2,29 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { ArrowRight, Award, Users, Wrench } from "lucide-react"
+import { ArrowRight, Award, Car, Users, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const features = [
   {
     icon: Award,
-    title: "Calidad Garantizada",
-    description: "Repuestos originales y alternativos de las mejores marcas del mercado",
+    title: "Experiencia comprobada",
+    description: "Más de seis décadas acompañando al sector automotor argentino",
   },
   {
     icon: Users,
-    title: "Atención Personalizada",
-    description: "Equipo especializado para asesorarte en cada compra",
+    title: "Compromiso y cercanía",
+    description: "Atención personalizada y soporte técnico para cada cliente",
   },
   {
     icon: Wrench,
-    title: "Soporte Técnico",
-    description: "Asistencia técnica especializada para talleres y profesionales",
+    title: "Conocimiento técnico real",
+    description: "Especialistas en Renault, Volkswagen y Nissan",
+  },
+  {
+    icon: Car,
+    title: "Cobertura nacional",
+    description: "Logística eficiente y amplia red de distribución",
   },
 ]
 
@@ -45,7 +50,7 @@ export function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-block"
               >
-                <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Sobre Nosotros</span>
+                <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Lo que nos diferencia</span>
               </motion.div>
 
               <motion.h2
@@ -63,9 +68,10 @@ export function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg text-muted-foreground leading-relaxed text-pretty"
               >
-                Balsamo Autopartes nació con la visión de revolucionar el mercado argentino de repuestos automotrices.
-                Durante más de 25 años, hemos construido una sólida reputación basada en la calidad de nuestros
-                productos, la excelencia en el servicio y el compromiso con nuestros clientes.
+                Ser especialistas no es solo conocer el repuesto, sino entender el vehículo y las necesidades de quienes trabajan con él.
+En Bálsamo combinamos trayectoria, conocimiento técnico y un servicio humano, que nos permite brindar soluciones precisas, ágiles y confiables.
+
+
               </motion.p>
 
               <motion.p
@@ -74,9 +80,8 @@ export function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="text-muted-foreground leading-relaxed"
               >
-                Desde nuestros inicios como una pequeña empresa familiar, hemos crecido hasta convertirnos en uno de los
-                principales distribuidores de autopartes del país, manteniendo siempre nuestros valores de honestidad,
-                calidad y servicio personalizado.
+                Desde nuestros inicios como una pequeña empresa familiar, hemos crecido hasta convertirnos en uno de los principales distribuidores de autopartes del país, manteniendo siempre nuestros valores de honestidad, calidad y servicio personalizado.
+
               </motion.p>
             </div>
 
@@ -154,8 +159,8 @@ export function AboutSection() {
                   <Award className="w-6 h-6 text-secondary" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-foreground">25+</div>
-                  <div className="text-sm text-muted-foreground">Años de Confianza</div>
+                  <div className="text-2xl font-bold text-foreground">50+</div>
+                  <div className="text-sm text-muted-foreground">Años de Experiencia</div>
                 </div>
               </div>
             </motion.div>

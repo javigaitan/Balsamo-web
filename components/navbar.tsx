@@ -9,10 +9,10 @@ import Image from "next/image";
 import Logo from '../public/logo.png'
 
 const brandLogos = [
-  { name: "Aequipe", src: "/marcas/marca_aequipe.png" },
-  { name: "Kreisen", src: "/marcas/marca_kreisen.png" },
-  { name: "Oxion", src: "/marcas/marca_oxion.png" },
-  { name: "Tajiro", src: "/marcas/marca_tajiro.png" },
+  { name: "Aequipe", src: "/marcas/marca_aequipe.svg" },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.svg" },
+  { name: "Oxion", src: "/marcas/marca_oxion.svg" },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.svg" },
 ]
 
 export function Navbar() {
@@ -30,7 +30,7 @@ export function Navbar() {
 
   const navItems = [
     { name: "Nosotros", href: "#about" },
-    { name: "Infoball 10", href: "#infoball" },
+    { name: "Infobal 10", href: "https://distribuidores-infobal.infobalbsa.com.ar/" },
     { name: "Contacto", href: "#contact" },
   ]
 

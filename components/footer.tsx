@@ -7,17 +7,16 @@ import Logo from '../public/logo.png'
 
 
 const brandLogos = [
- { name: "Aequipe", src: "/marcas/marca_aequipe.png" },
-  { name: "Kreisen", src: "/marcas/marca_kreisen.png" },
-  { name: "Oxion", src: "/marcas/marca_oxion.png" },
-  { name: "Tajiro", src: "/marcas/marca_tajiro.png" },
+ { name: "Aequipe", src: "/marcas/marca_aequipe.svg" },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.svg" },
+  { name: "Oxion", src: "/marcas/marca_oxion.svg" },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.svg" },
 ]
 
 const socialLinks = [
-  { name: "Facebook", icon: Facebook, href: "#", color: "hover:text-blue-600" },
-  { name: "Instagram", icon: Instagram, href: "#", color: "hover:text-pink-600" },
-  { name: "Twitter", icon: Twitter, href: "#", color: "hover:text-blue-400" },
-  { name: "LinkedIn", icon: Linkedin, href: "#", color: "hover:text-blue-700" },
+  { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/balsamosa/?locale=es_LA", color: "hover:text-blue-600" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/balsamosa/?hl=es", color: "hover:text-pink-600" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/balsamo-s.a./", color: "hover:text-blue-700" },
 ]
 
 export function Footer() {
@@ -43,8 +42,7 @@ export function Footer() {
       />
     </div>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Líder en autopartes con más de 25 años de experiencia, ofreciendo repuestos de calidad para todo tipo de
-              vehículos en toda Argentina.
+              Especialista en repuestos para vehiculos Renault, Volkswagen y Nissan.
             </p>
           </motion.div>
 
@@ -90,7 +88,7 @@ export function Footer() {
               {[
                 { name: "Nosotros", href: "#about" },
                 { name: "Productos", href: "#products" },
-                { name: "Infoball 10", href: "#infoball" },
+                { name: "Infobal 10", href: "https://distribuidores-infobal.infobalbsa.com.ar/" },
                 { name: "Contacto", href: "#contact" },
                 { name: "Términos y Condiciones", href: "#terms" },
                 { name: "Política de Privacidad", href: "#privacy" },
@@ -145,7 +143,7 @@ export function Footer() {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     whileHover={{ scale: 1.05 }}
                     viewport={{ once: true }}
-                    className="bg-white backdrop-blur-sm rounded-lg p-2 hover:bg-white/20 transition-colors duration-200"
+                    className="bg-white backdrop-blur-sm rounded-lg p-2 hover:  duration-200 cursor-pointer"
                   >
                     <img
                       src={brand.src || "/placeholder.svg"}
