@@ -30,6 +30,8 @@ interface CompanyFormData {
   vatCategory: string
   cuit: string
   hasShop: string
+  hasShopOtherDetails?: string
+  companyForm: any
 }
 
 const provinces = [
@@ -69,6 +71,7 @@ const vatCategories = [
 export function ContactSection() {
   const [formType, setFormType] = useState<FormType>("customer")
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showOtherShopDetails, setShowOtherShopDetails] = useState(false)
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -92,6 +95,7 @@ export function ContactSection() {
     console.log("Company form data:", data)
     alert("¡Gracias por tu interés! Nuestro equipo comercial se pondrá en contacto contigo.")
     companyForm.reset()
+    setShowOtherShopDetails(false)
     setIsSubmitting(false)
   }
 
@@ -126,7 +130,6 @@ export function ContactSection() {
                   icon: Phone,
                   title: "Teléfono",
                   content: "(54 351) 492 9000",
-                  
                 },
                 {
                   icon: Mail,
@@ -158,23 +161,22 @@ export function ContactSection() {
             </div>
 
             {/* Google Maps Embed */}
-<motion.div
-  initial={{ opacity: 0, y: 30 }}
-  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-  transition={{ duration: 0.8, delay: 0.6 }}
-  className="overflow-hidden rounded-2xl h-64 w-full"
->
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.9725444949636!2d-64.14797741534913!3d-31.360858274089306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432977f8fc90643%3A0xbc550f60771f1324!2sMayorista%20B%C3%A1lsamo%20SA!5e0!3m2!1ses-419!2sar!4v1759641470168!5m2!1ses-419!2sar"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    allowFullScreen
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  />
-</motion.div>
-
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="overflow-hidden rounded-2xl h-64 w-full"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.9725444949636!2d-64.14797741534913!3d-31.360858274089306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432977f8fc90643%3A0xbc550f60771f1324!2sMayorista%20B%C3%A1lsamo%20SA!5e0!3m2!1ses-419!2sar!4v1759641470168!5m2!1ses-419!2sar"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Contact Form */}
@@ -305,7 +307,7 @@ export function ContactSection() {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="company-name">Nombre</Label>
+                    <Label htmlFor="company-name">Nombre y apellido</Label>
                     <Input
                       id="company-name"
                       {...companyForm.register("name", { required: "Este campo es requerido" })}
@@ -435,21 +437,54 @@ export function ContactSection() {
                 </div>
 
                 <div>
-                  <Label htmlFor="company-shop">¿Tienes un taller de repuestos?</Label>
-                  <Select onValueChange={(value) => companyForm.setValue("hasShop", value)}>
+                  <Label htmlFor="company-shop">¿Cuenta con un local comercial de venta de repuestos?</Label>
+                  <Select
+                    onValueChange={(value) => {
+                      companyForm.setValue("hasShop", value)
+                      setShowOtherShopDetails(value === "other")
+                      if (value !== "other") {
+                        companyForm.setValue("hasShopOtherDetails", "")
+                      }
+                    }}
+                  >
                     <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Seleccionar opción" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="yes">Sí, tengo un taller de repuestos</SelectItem>
-                      <SelectItem value="planning">No, pero planeo abrir uno</SelectItem>
-                      <SelectItem value="other">Otro</SelectItem>
+                      <SelectItem value="yes">Si, cuento con una casa de repuestos</SelectItem>
+                      <SelectItem value="planning">No, estoy pensando abrir un local</SelectItem>
+                      <SelectItem value="other">Otros</SelectItem>
                     </SelectContent>
                   </Select>
                   {companyForm.formState.errors.hasShop && (
                     <p className="text-sm text-destructive mt-1">{companyForm.formState.errors.hasShop.message}</p>
                   )}
                 </div>
+
+                {showOtherShopDetails && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Label htmlFor="company-shop-other">Por favor, especifique</Label>
+                    <Textarea
+                      id="company-shop-other"
+                      {...companyForm.register("hasShopOtherDetails", {
+                        required: showOtherShopDetails ? "Este campo es requerido cuando selecciona 'Otros'" : false,
+                      })}
+                      rows={3}
+                      className="mt-1"
+                      placeholder="Describa su situación..."
+                    />
+                    {companyForm.formState.errors.hasShopOtherDetails && (
+                      <p className="text-sm text-destructive mt-1">
+                        {companyForm.formState.errors.hasShopOtherDetails.message}
+                      </p>
+                    )}
+                  </motion.div>
+                )}
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
                   {isSubmitting ? (
