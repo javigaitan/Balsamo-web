@@ -113,11 +113,14 @@ export function BrandsCarousel() {
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-foreground mb-4">Calidad Garantizada</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-4">Especialistas en Todas las Familias de Piezas</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Cada marca que representamos ha sido cuidadosamente seleccionada por su compromiso con la calidad,
-              innovación y confiabilidad. Desde repuestos originales hasta alternativas de primera línea, ofrecemos
-              soluciones para todas las necesidades y presupuestos.
+              En Bálsamo Autopartes ofrecemos soluciones para cada sistema del vehículo, desde los componentes más específicos hasta los más generales.
+Nuestra experiencia nos permite brindar una línea completa de repuestos que cubre todas las familias: motor, frenos, suspensión, transmisión, eléctrico y carrocería.
+            </p>
+
+            <p className="text-muted-foreground leading-relaxed">
+              A través de nuestras marcas Aequipe, Kreisen y Tajiro, abarcamos todo el universo de vehículos Renault, Volkswagen y Nissan, garantizando disponibilidad, compatibilidad y asesoramiento técnico especializado.
             </p>
           </div>
         </motion.div>
@@ -127,13 +130,15 @@ export function BrandsCarousel() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6"
         >
           {[
-            { category: "Motor", count: "2,500+" },
-            { category: "Frenos", count: "1,800+" },
-            { category: "Suspensión", count: "1,200+" },
-            { category: "Eléctrico", count: "3,000+" },
+            { category: "Motor", count: "10,000+" },
+            { category: "Frenos", count: "200+" },
+            { category: "Suspensión", count: "40,000+" },
+            { category: "Eléctrico", count: "5,000+" },
+            { category: "Transmisión y dirección", count: "3,000+" },
+            { category: "Carrocería y Accesorios", count: "14,000+" },
           ].map((item, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-xl shadow-sm">
               <div className="text-2xl font-bold text-primary mb-1">{item.count}</div>

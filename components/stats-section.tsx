@@ -32,10 +32,10 @@ const stats = [
   {
     id: 4,
     icon: TrendingUp,
-    number: 4,
-    suffix: "",
-    label: "Marcas Propias",
-    description: "Aequipe, Kreisen, Tajiro y Oxion",
+    number: 30000,
+    suffix: "+",
+    label: "Centro de Distribucion",
+    description: "Metros cubiertos de centro de distribucion",
   },
 ]
 
