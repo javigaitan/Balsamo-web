@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button"
 const slides = [
   {
     id: 1,
-    type: "video",
+    type: "imagen",
     content: {
-      src: "/auto-parts-warehouse-video.jpg",
+      src: "/fotos_web_banner/banner_07.png",
       title: "Calidad que Impulsa tu Vehículo",
       subtitle: "Más de 25 años brindando repuestos de primera calidad",
       cta: "Ver Catálogo",
