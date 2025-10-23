@@ -42,7 +42,7 @@ export function BrandsCarousel() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section ref={ref} className="py-16 lg:py-24 bg-muted/20 overflow-hidden">
+    <section ref={ref} className="py-18 lg:py-24 bg-muted/20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -141,11 +141,11 @@ Nuestra experiencia nos permite brindar una línea completa de repuestos que cub
       key={index}
       className="text-center p-4 bg-white rounded-xl shadow-sm flex flex-col items-center"
     >
-      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 mb-3">
+      <div className="flex items-center justify-center w-16 h-16 rounded-full  mb-3">
         <img
           src={item.icon}
           alt={item.category}
-          className="h-8 w-8 object-contain text-blue-600"
+          className="h-10 w-10 object-contain text-blue-600"
         />
       </div>
       <div className="text-2xl font-bold text-blue-700 mb-1">{item.count}</div>

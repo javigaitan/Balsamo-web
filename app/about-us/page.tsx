@@ -3,6 +3,8 @@ import { Footer } from "@/components/footer"
 import { ArrowLeft, Award, Users, Target, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
+
 
 export default function AboutUsPage() {
   return (
@@ -75,9 +77,15 @@ Así, con más de 60 años de trayectoria, seguimos acompañando a talleres, dis
               </div>
             </div>
 
-            <div className="bg-muted/30 rounded-2xl p-8">
-              
-            </div>
+           <div className=" rounded-2xl p-8 flex justify-center items-center overflow-auto">
+  <Image
+src="/foto_04.png"
+    alt="Shock absorber illustration"
+    width={600}
+    height={400}
+    className="w-full h-auto max-w-2xl object-contain rounded-2xl"
+  />
+</div>
           </div>
 
           {/* Timeline */}

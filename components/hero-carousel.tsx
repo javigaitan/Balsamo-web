@@ -9,10 +9,10 @@ const slides = [
   {
     id: 1,
     type: "image",
-    content: { 
+    content: {
       src: "/fotos-banner/banner_01.png",
       title: "Calidad que Impulsa tu Vehículo",
-      subtitle: "Más de 25 años brindando repuestos de primera calidad",
+      subtitle: "Más de 50 años brindando repuestos de primera calidad",
       cta: "Ver Catálogo",
     },
   },
@@ -30,16 +30,17 @@ const slides = [
     id: 3,
     type: "svg-text",
     content: {
-      src: "/banner_02.png",
+      src: "",
       title: "Experiencia y Confianza",
       subtitle: "Líderes en el mercado argentino de autopartes",
       description:
         "Con presencia en todo el país, ofrecemos soluciones integrales para talleres, distribuidores y usuarios finales.",
       cta: "Contactanos",
+      link: "/#contact",
       stats: [
-        { number: "25+", label: "Años de experiencia" },
+        { number: "50+", label: "Años de experiencia" },
         { number: "50K+", label: "Repuestos disponibles" },
-        { number: "95%", label: "Cobertura nacional" },
+        { number: "100%", label: "Cobertura nacional" },
       ],
     },
   },
@@ -217,7 +218,7 @@ function SvgTextSlide({ slide }: { slide: any }) {
     <div className="relative h-full bg-gradient-to-br from-background to-muted/50">
       <div className="h-full flex items-center">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
+          {/* Text Content - Left Side */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -249,60 +250,24 @@ function SvgTextSlide({ slide }: { slide: any }) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <Button size="lg" className="text-lg px-8 py-3">
-                {slide.content.cta}
+              <Button size="lg" className="text-lg px-8 py-3" asChild>
+                <a href={slide.content.link}>{slide.content.cta}</a>
               </Button>
             </motion.div>
           </motion.div>
 
-          {/* SVG Illustration */}
+          {/* SVG Image - Right Side */}
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center"
+            className="flex justify-center items-center max-h-[600px] overflow-auto"
           >
-            <svg width="400" height="400" viewBox="0 0 400 400" className="w-full max-w-md">
-              <defs>
-                <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="hsl(var(--primary))" />
-                  <stop offset="100%" stopColor="hsl(var(--secondary))" />
-                </linearGradient>
-              </defs>
-
-              {/* Car silhouette */}
-              <motion.path
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 2, delay: 0.6 }}
-                d="M80 250 L120 220 L160 210 L240 210 L280 220 L320 250 L320 280 L300 280 L300 300 L280 300 L280 280 L120 280 L120 300 L100 300 L100 280 L80 280 Z"
-                fill="url(#primaryGradient)"
-                stroke="hsl(var(--primary))"
-                strokeWidth="2"
-              />
-
-              {/* Wheels */}
-              <motion.circle
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.2 }}
-                cx="130"
-                cy="290"
-                r="20"
-                fill="hsl(var(--foreground))"
-              />
-              <motion.circle
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.4 }}
-                cx="270"
-                cy="290"
-                r="20"
-                fill="hsl(var(--foreground))"
-              />
-
-          
-            </svg>
+            <img
+              src="/fotos-banner/img-cajas-aequipe-banner.png"
+              alt="Cajas de repuestos AEQUIPE RENAULT"
+              className="w-full h-auto max-w-md object-contain rounded-2xl"
+            />
           </motion.div>
         </div>
       </div>
