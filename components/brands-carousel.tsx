@@ -3,38 +3,35 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
+
 const brands = [
-  { name: "Aniceto", logo: "/sub-marcas/aniceto.png" },
-  { name: "Bitron", logo: "/sub-marcas/bitron.jpg" },
-  { name: "Bosch", logo: "/sub-marcas/bosch.jpg" },
-  { name: "Bufalo", logo: "/sub-marcas/buffalo.jpg" },
-  { name: "Cauplas", logo: "/sub-marcas/cauplas.jpg" },
-  { name: "Corteco", logo: "/sub-marcas/corteco.jpg" },
-  { name: "Countier", logo: "/sub-marcas/coutier.jpg" },
-  { name: "Denso", logo: "/sub-marcas/denso-1.png" },
-  { name: "Dolz", logo: "/sub-marcas/dolz.jpg" },
-  { name: "Fitam", logo: "/sub-marcas/fitam.jpg" },
-  { name: "Frasle", logo: "/sub-marcas/frasle.jpg" },
-  { name: "Gates", logo: "/sub-marcas/gates.jpg" },
-  { name: "Litton", logo: "/sub-marcas/litton.jpg" },
-  { name: "Tagline", logo: "/sub-marcas/Logo_Tagline-Combos_01-01.png" },
-  { name: "Aequipe", logo: "/sub-marcas/logo-aequipe.jpg" },
-  { name: "Kreisen", logo: "/sub-marcas/logo-kreisen.jpg" },
-  { name: "LAM", logo: "/sub-marcas/logo-LAM.jpeg" },
-  { name: "OXION", logo: "/sub-marcas/logo-oxion.jpg" },
-  { name: "Marelli", logo: "/sub-marcas/marelli.jpg" },
-  { name: "ngk", logo: "/sub-marcas/ngk.jpg" },
-  { name: "Oran", logo: "/sub-marcas/oran.jpg" },
-  { name: "Purflux", logo: "/sub-marcas/purflux.jpg" },
-  { name: "rm", logo: "/sub-marcas/rm.jpg" },
-  { name: "Sabo", logo: "/sub-marcas/sabo.jpg" },
-  { name: "s", logo: "/sub-marcas/s.jpeg" },
-  { name: "Sachs", logo: "/sub-marcas/sachs.jpg" },
-  { name: "Schaeffer", logo: "/sub-marcas/schaeffler-logo.jpg" },
-  { name: "SNR", logo: "/sub-marcas/snr-ntn.jpg" },
-  { name: "tajiro", logo: "/sub-marcas/tajiro-e1750338372930.jpg" },
-  { name: "valeo", logo: "/sub-marcas/valeo.jpg" },
-  { name: "zf", logo: "/sub-marcas/zf.jpg" },
+  { name: "ag", logo: "/sub-marcas/ag.png" },
+  { name: "bbb", logo: "/sub-marcas/bbb.png" },
+  { name: "Bosch", logo: "/sub-marcas/bosch.png" },
+  { name: "cauplas", logo: "/sub-marcas/cauplas.png" },
+  { name: "dayco", logo: "/sub-marcas/dayco.png" },
+  { name: "dolz", logo: "/sub-marcas/dolz.png" },
+  { name: "elring", logo: "/sub-marcas/elring.png" },
+  { name: "ficosa", logo: "/sub-marcas/ficosa.png" },
+  { name: "fitam", logo: "/sub-marcas/fitam.png" },
+  { name: "frasle", logo: "/sub-marcas/frasle.png" },
+  { name: "gates", logo: "/sub-marcas/gates.png" },
+  { name: "grupo_schaeffler", logo: "/sub-marcas/grupo_schaeffler.png" },
+  { name: "hella", logo: "/sub-marcas/hella.png" },
+  { name: "lam", logo: "/sub-marcas/lam.png" },
+  { name: "litton", logo: "/sub-marcas/litton.png" },
+  { name: "magnetimarelli", logo: "/sub-marcas/magnetimarelli.png" },
+  { name: "marcas_proveedores", logo: "/sub-marcas/marcas_proveedores.png" },
+  { name: "nakata", logo: "/sub-marcas/nakata.png" },
+  { name: "ngk", logo: "/sub-marcas/ngk.png" },
+  { name: "ntnsnr", logo: "/sub-marcas/ntnsnr.png" },
+  { name: "philips", logo: "/sub-marcas/oran.png" },
+  { name: "Purflux", logo: "/sub-marcas/philips.png" },
+  { name: "sabo", logo: "/sub-marcas/sabo.png" },
+  { name: "sachs", logo: "/sub-marcas/sachs.png" },
+  { name: "trico", logo: "/sub-marcas/trico.png" },
+  { name: "valeo", logo: "/sub-marcas/valeo.png" },
+  { name: "viewmax", logo: "/sub-marcas/viewmax.png" },
 ]
 
 // Duplicate brands for seamless infinite scroll
@@ -126,26 +123,36 @@ Nuestra experiencia nos permite brindar una línea completa de repuestos que cub
         </motion.div>
 
         {/* Brand Categories */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6"
-        >
-          {[
-            { category: "Motor", count: "10,000+" },
-            { category: "Frenos", count: "200+" },
-            { category: "Suspensión", count: "40,000+" },
-            { category: "Eléctrico", count: "5,000+" },
-            { category: "Transmisión y dirección", count: "3,000+" },
-            { category: "Carrocería y Accesorios", count: "14,000+" },
-          ].map((item, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-xl shadow-sm">
-              <div className="text-2xl font-bold text-primary mb-1">{item.count}</div>
-              <div className="text-sm text-muted-foreground">{item.category}</div>
-            </div>
-          ))}
-        </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+  transition={{ duration: 0.8, delay: 0.8 }}
+  className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6"
+>
+  {[
+    { category: "Motor", count: "10,000+", icon: "/icons/engine.svg" },
+    { category: "Frenos", count: "200+", icon: "/icons/brake.svg" },
+    { category: "Suspensión", count: "40,000+", icon: "/icons/suspension.svg" },
+    { category: "Eléctrico", count: "5,000+", icon: "/icons/electric.svg" },
+    { category: "Transmisión y dirección", count: "3,000+", icon: "/icons/gear.svg" },
+    { category: "Carrocería y Accesorios", count: "14,000+", icon: "/icons/car.svg" },
+  ].map((item, index) => (
+    <div
+      key={index}
+      className="text-center p-4 bg-white rounded-xl shadow-sm flex flex-col items-center"
+    >
+      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-50 mb-3">
+        <img
+          src={item.icon}
+          alt={item.category}
+          className="h-8 w-8 object-contain text-blue-600"
+        />
+      </div>
+      <div className="text-2xl font-bold text-blue-700 mb-1">{item.count}</div>
+      <div className="text-sm text-muted-foreground">{item.category}</div>
+    </div>
+  ))}
+</motion.div>
       </div>
     </section>
   )

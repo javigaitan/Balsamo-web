@@ -9,6 +9,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import emailjs from "emailjs-com"
+import Swal from "sweetalert2"
 
 type FormType = "customer" | "company"
 
@@ -74,30 +76,85 @@ export function ContactSection() {
   const [showOtherShopDetails, setShowOtherShopDetails] = useState(false)
   const ref = useRef<HTMLElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const formRef = useRef<HTMLFormElement>(null)
+  const [isLoading, setIsLoading] = useState(false)
 
   const customerForm = useForm<CustomerFormData>()
   const companyForm = useForm<CompanyFormData>()
 
+
+
   const onSubmitCustomer = async (data: CustomerFormData) => {
-    setIsSubmitting(true)
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    console.log("Customer form data:", data)
-    alert("¡Gracias por contactarnos! Te responderemos pronto.")
+  setIsSubmitting(true)
+
+  try {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      { 
+        ...data, 
+        form_type: "Cliente Final"
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    )
+
+    Swal.fire({
+      title: "¡Mensaje enviado!",
+      text: "Nos pondremos en contacto contigo lo antes posible.",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    })
+
     customerForm.reset()
+  } catch (error) {
+    console.error("EmailJS Error:", error)
+    Swal.fire({
+      title: "Error",
+      text: "No se pudo enviar el mensaje. Inténtalo más tarde.",
+      icon: "error",
+      confirmButtonText: "Aceptar",
+    })
+  } finally {
     setIsSubmitting(false)
   }
+}
 
-  const onSubmitCompany = async (data: CompanyFormData) => {
-    setIsSubmitting(true)
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    console.log("Company form data:", data)
-    alert("¡Gracias por tu interés! Nuestro equipo comercial se pondrá en contacto contigo.")
+const onSubmitCompany = async (data: CompanyFormData) => {
+  setIsSubmitting(true)
+
+  try {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      { 
+        ...data, 
+        form_type: "Empresa"
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    )
+
+    Swal.fire({
+      title: "¡Solicitud enviada!",
+      text: "Nuestro equipo comercial se pondrá en contacto contigo pronto.",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+    })
+
     companyForm.reset()
     setShowOtherShopDetails(false)
+  } catch (error) {
+    console.error("EmailJS Error:", error)
+    Swal.fire({
+      title: "Error",
+      text: "No se pudo enviar la solicitud. Inténtalo más tarde.",
+      icon: "error",
+      confirmButtonText: "Aceptar",
+    })
+  } finally {
     setIsSubmitting(false)
   }
+}
+
 
   return (
     <section id="contact" ref={ref} className="py-16 lg:py-24 bg-background">

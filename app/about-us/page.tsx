@@ -76,17 +76,7 @@ Así, con más de 60 años de trayectoria, seguimos acompañando a talleres, dis
             </div>
 
             <div className="bg-muted/30 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold text-foreground mb-4">Nuestra Misión</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Ser el socio estratégico de confianza para talleres, distribuidores y usuarios finales, proporcionando
-                soluciones integrales en autopartes que superen las expectativas de calidad, disponibilidad y servicio.
-              </p>
-
-              <h3 className="text-xl font-semibold text-foreground mb-4">Nuestra Visión</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Consolidarnos como la empresa líder en distribución de autopartes en Argentina, expandiendo nuestra
-                presencia regional y siendo reconocidos por nuestra innovación, calidad y compromiso con la excelencia.
-              </p>
+              
             </div>
           </div>
 

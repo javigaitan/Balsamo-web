@@ -10,10 +10,10 @@ import Image from "next/image";
 import Logo from '../public/logo.png'
 
 const brandLogos = [
-  { name: "Aequipe", src: "/marcas/marca_aequipe.svg" },
-  { name: "Kreisen", src: "/marcas/marca_kreisen.svg" },
-  { name: "Oxion", src: "/marcas/marca_oxion.svg" },
-  { name: "Tajiro", src: "/marcas/marca_tajiro.svg" },
+  { name: "Aequipe", src: "/marcas/marca_aequipe.svg", href:'https://www.instagram.com/balsamosa/' },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.svg", href:'https://www.instagram.com/balsamosa/'  },
+  { name: "Oxion", src: "/marcas/marca_oxion.svg", href:'https://www.instagram.com/balsamosa/'  },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.svg", href:'https://www.instagram.com/balsamosa/'  },
 ]
 
 export function Navbar() {
@@ -79,14 +79,15 @@ export function Navbar() {
             {/* Brand Logos */}
             <div className="flex items-center space-x-4 pl-6 border-l border-border">
               {brandLogos.map((brand, index) => (
-                <motion.div
+                <motion.a
                   key={brand.name}
+                  href={brand.href}
                   whileHover={{ scale: 1.1, y: -2 }}
                   transition={{ duration: 0.2 }}
                   className="opacity-70 hover:opacity-100 transition-opacity duration-200"
                 >
                   <img src={brand.src || "/placeholder.svg"} alt={brand.name} className="h-8 w-auto object-contain" />
-                </motion.div>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -123,20 +124,28 @@ export function Navbar() {
             ))}
 
             {/* Mobile Brand Logos */}
-            <div className="pt-4 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-3">Nuestras marcas:</p>
-              <div className="grid grid-cols-2 gap-4">
-                {brandLogos.map((brand) => (
-                  <div key={brand.name} className="flex justify-center">
-                    <img
-                      src={brand.src || "/placeholder.svg"}
-                      alt={brand.name}
-                      className="h-8 w-auto object-contain opacity-70"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
+<div className="pt-4 border-t border-border">
+  <p className="text-sm text-muted-foreground mb-3">Nuestras marcas:</p>
+  <div className="grid grid-cols-2 gap-4">
+    {brandLogos.map((brand) => (
+      <div key={brand.name} className="flex justify-center">
+        <a
+          href={brand.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-center"
+        >
+          <img
+            src={brand.src || "/placeholder.svg"}
+            alt={brand.name}
+            className="h-8 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-200"
+          />
+        </a>
+      </div>
+    ))}
+  </div>
+</div>
+
           </div>
         </motion.div>
       </div>

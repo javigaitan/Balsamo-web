@@ -19,7 +19,7 @@ const stats = [
     number: 50,
     suffix: "+",
     label: "Años de Experiencia",
-    description: "Más de medio siglo en el mercado de autoparte",
+    description: "Más de medio siglo en el mercado de autopartes",
   },
   {
     id: 3,
@@ -34,8 +34,8 @@ const stats = [
     icon: TrendingUp,
     number: 30000,
     suffix: "+",
-    label: "Centro de Distribucion",
-    description: "Metros cubiertos de centro de distribucion",
+    label: "Metros Cubiertos",
+    description: "Centro de distribución con +30.000 metros cubiertos",
   },
 ]
 
@@ -107,7 +107,7 @@ export function StatsSection() {
             Especialista en autopartes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-Lideres en la especializacion de autopartes para vehiculos Renault, Volkswagen y Nissan
+Lideres en la especialización de autopartes para vehiculos Renault, Volkswagen y Nissan
           </p>
         </motion.div>
 

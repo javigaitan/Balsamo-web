@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button"
 const slides = [
   {
     id: 1,
-    type: "imagen",
-    content: {
-      src: "/fotos_web_banner/banner_07.png",
+    type: "image",
+    content: { 
+      src: "/fotos-banner/banner_01.png",
       title: "Calidad que Impulsa tu Vehículo",
       subtitle: "Más de 25 años brindando repuestos de primera calidad",
       cta: "Ver Catálogo",
@@ -20,7 +20,7 @@ const slides = [
     id: 2,
     type: "image",
     content: {
-      src: "/modern-auto-parts-store.png",
+      src: "/fotos-banner/banner_05.png",
       title: "Tecnología de Vanguardia",
       subtitle: "Repuestos originales y alternativos para todas las marcas",
       cta: "Conocer Más",
@@ -30,6 +30,7 @@ const slides = [
     id: 3,
     type: "svg-text",
     content: {
+      src: "/banner_02.png",
       title: "Experiencia y Confianza",
       subtitle: "Líderes en el mercado argentino de autopartes",
       description:
@@ -53,7 +54,7 @@ export function HeroCarousel() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+    }, 9000)
 
     return () => clearInterval(interval)
   }, [isPlaying])
@@ -78,7 +79,7 @@ export function HeroCarousel() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.9, ease: "easeInOut" }}
           className="absolute inset-0"
         >
           {slides[currentSlide].type === "video" && <VideoSlide slide={slides[currentSlide]} />}
