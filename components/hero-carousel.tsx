@@ -14,6 +14,7 @@ const slides = [
       title: "Calidad que Impulsa tu Vehículo",
       subtitle: "Más de 50 años brindando repuestos de primera calidad",
       cta: "Ver Catálogo",
+      link: "/",
     },
   },
   {
@@ -24,6 +25,7 @@ const slides = [
       title: "Tecnología de Vanguardia",
       subtitle: "Repuestos originales y alternativos para todas las marcas",
       cta: "Conocer Más",
+      link: "/",
     },
   },
   {

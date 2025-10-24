@@ -152,6 +152,7 @@ Si el despliegue no se realiza en **Vercel**, seguir estos pasos:
 [Implementación y Funcionamiento del Servicio de Envío de Correos mediante EmailJS](https://docs.google.com/document/d/1_Yhfut2DqHwCr6gjN41eZmEbjH7TWT6vUUzL5reEDdM/edit?usp=sharing)
 
 ### 📄 Documentación funcional del proyecto
+[Modificación de Imágenes en el Componente Banner Carrucel](https://docs.google.com/document/d/1gOxQo6N8AKrLnTHq-dLTudLAcjt-uTaoVMNoVrjvNIM/edit?usp=sharing)
 
 
 
