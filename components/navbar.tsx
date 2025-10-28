@@ -49,14 +49,15 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" passHref>
   <motion.div whileHover={{ scale: 1.06 }} className="flex-shrink-0 cursor-pointer">
-    <div className=" px-4 py-2 rounded-lg flex items-center justify-center">
-      <Image
-        src={Logo}
-        alt="Logo BALSAMO"
-        className="object-contain h-10 lg:h-10 w-auto"
-        priority
-      />
-    </div>
+    <div className="px-4 py-2 rounded-lg flex items-center justify-center">
+  <Image
+    src={Logo}
+    alt="Logo BALSAMO"
+    className="object-contain h-14 lg:h-18 w-auto"
+    priority
+  />
+</div>
+
   </motion.div>
 </Link>
 

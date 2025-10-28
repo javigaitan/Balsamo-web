@@ -14,18 +14,30 @@ const oswald = Oswald({
 export const metadata: Metadata = {
   title: "Balsamo Autopartes - Repuestos de Calidad",
   description:
-    "Líder en autopartes con más de 25 años de experiencia. Encuentra repuestos de calidad para tu vehículo.",
+    "Líder en autopartes con más de 50 años de experiencia. Encuentra repuestos de calidad para tu vehículo.",
+  keywords: [
+    "autopartes",
+    "repuestos",
+    "Balsamo Autopartes",
+    "repuestos para autos",
+    "autopartes Córdoba",
+    "repuestos originales",
+    "repuestos automotor",
+    "accesorios automotrices",
+  ],
+  authors: [{ name: "Balsamo Autopartes", url: "https://www.balsamo.com.ar" }],
   generator: "v0.app",
+  category: "Automotor",
   icons: {
-    icon: "/logobalsamo-icon.png", 
+    icon: "/logobalsamo-icon.png",
     shortcut: "/logobalsamo-icon.png",
-    apple: "/logobalsamo-icon.png", 
+    apple: "/logobalsamo-icon.png",
   },
   openGraph: {
     title: "Balsamo Autopartes - Repuestos de Calidad",
     description:
       "Líder en autopartes con más de 25 años de experiencia. Encuentra repuestos de calidad para tu vehículo.",
-    url: "https://www.balsamo.com.ar/", 
+    url: "https://www.balsamo.com.ar/",
     siteName: "Balsamo Autopartes",
     images: [
       {
@@ -38,7 +50,9 @@ export const metadata: Metadata = {
     locale: "es_ES",
     type: "website",
   },
+  
 }
+
 
 
 export default function RootLayout({
