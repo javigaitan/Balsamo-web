@@ -3,14 +3,14 @@
 import { motion } from "framer-motion"
 import { MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin, Import } from "lucide-react"
 import Image from "next/image";
-import Logo from '../public/logo.png'
+import Logo from '../public/logo-balsamo-blanco.png'
 
 
 const brandLogos = [
- { name: "Aequipe", src: "/marcas/marca_aequipe.svg" },
-  { name: "Kreisen", src: "/marcas/marca_kreisen.svg" },
-  { name: "Oxion", src: "/marcas/marca_oxion.svg" },
-  { name: "Tajiro", src: "/marcas/marca_tajiro.svg" },
+ { name: "Aequipe", src: "/marcas/marca_aequipe.png" },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.png" },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.png" },
+  { name: "Oxion", src: "/marcas/marca_oxion.png" },
 ]
 
 const socialLinks = [
@@ -33,14 +33,15 @@ export function Footer() {
             className="space-y-4"
           >
             {/* Company Logo */}
-            <div className="bg-primary px-4 py-2 rounded-lg flex items-center justify-center">
-      <Image
-        src={Logo}
-        alt="Logo BALSAMO"
-        className="object-contain h-6 lg:h-8 w-auto"
-        priority
-      />
-    </div>
+<div className="px-6 py-4 rounded-lg flex items-center justify-center">
+  <Image
+    src={Logo}
+    alt="Logo BALSAMO"
+    className="object-contain h-16 lg:h-20 w-auto"
+    priority
+  />
+</div>
+
             <p className="text-slate-300 text-sm leading-relaxed">
               Especialista en repuestos para vehiculos Renault, Volkswagen y Nissan.
             </p>
@@ -171,12 +172,23 @@ export function Footer() {
             </div>
 
             {/* Signature */}
-            <motion.div whileHover={{ scale: 1.02 }} className="text-slate-500 text-xs text-center md:text-right">
-              <p className="opacity-70 hover:opacity-100 transition-opacity duration-200">
-                Created by <span className="text-secondary font-medium">Gaitán Javier Emanuel</span> -
-                <span className="text-primary font-medium"> Tab Soluciones</span>
-              </p>
-            </motion.div>
+            <motion.div
+  whileHover={{ scale: 1.02 }}
+  className="text-slate-500 text-xs text-center md:text-right"
+>
+  <a
+    href="https://wa.me/3512075102?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20soluciones%20y%20desarrollos%20web
+" // 
+    target="_blank"
+    rel="noopener noreferrer"
+    className="opacity-70 hover:opacity-100 transition-opacity duration-200"
+  >
+    Created by{" "}
+    <span className="text-secondary font-medium">Gaitán Javier Emanuel</span> -{" "}
+    <span className="text-primary font-medium">Tab Soluciones</span>
+  </a>
+</motion.div>
+
           </div>
         </motion.div>
       </div>

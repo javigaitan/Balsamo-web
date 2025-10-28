@@ -32,7 +32,7 @@ const stats = [
   {
     id: 4,
     icon: TrendingUp,
-    number: 30000,
+    number: 20000,
     suffix: "+",
     label: "Metros Cubiertos",
     description: "Centro de distribución con +30.000 metros cubiertos",

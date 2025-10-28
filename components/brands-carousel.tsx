@@ -131,8 +131,8 @@ Nuestra experiencia nos permite brindar una línea completa de repuestos que cub
 >
   {[
     { category: "Motor", count: "10,000+", icon: "/icons/engine.svg" },
-    { category: "Frenos", count: "200+", icon: "/icons/brake.svg" },
-    { category: "Suspensión", count: "40,000+", icon: "/icons/suspension.svg" },
+    { category: "Frenos", count: "2,000+", icon: "/icons/brake.svg" },
+    { category: "Suspensión", count: "4,000+", icon: "/icons/suspension.svg" },
     { category: "Eléctrico", count: "5,000+", icon: "/icons/electric.svg" },
     { category: "Transmisión y dirección", count: "3,000+", icon: "/icons/gear.svg" },
     { category: "Carrocería y Accesorios", count: "14,000+", icon: "/icons/car.svg" },

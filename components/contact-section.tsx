@@ -93,7 +93,7 @@ export function ContactSection() {
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       { 
         ...data, 
-        form_type: "Cliente Final"
+        form_type: "Consumidor Final"
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
@@ -255,7 +255,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                   }`}
                 >
                   <User className="w-4 h-4" />
-                  <span className="font-medium">Soy cliente final</span>
+                  <span className="font-medium">Soy consumidor final</span>
                 </button>
                 <button
                   onClick={() => setFormType("company")}

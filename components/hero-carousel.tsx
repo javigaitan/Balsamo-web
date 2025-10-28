@@ -11,7 +11,7 @@ const slides = [
     type: "image",
     content: {
       src: "/fotos-banner/banner_01.png",
-      title: "Calidad que Impulsa tu Vehículo",
+      title: "Calidad que impulsa tu vehículo",
       subtitle: "Más de 50 años brindando repuestos de primera calidad",
       cta: "Ver Catálogo",
       link: "/",
@@ -22,7 +22,7 @@ const slides = [
     type: "image",
     content: {
       src: "/fotos-banner/banner_05.png",
-      title: "Tecnología de Vanguardia",
+      title: "Tecnología de vanguardia",
       subtitle: "Repuestos originales y alternativos para todas las marcas",
       cta: "Conocer Más",
       link: "/",
@@ -33,7 +33,7 @@ const slides = [
     type: "svg-text",
     content: {
       src: "",
-      title: "Experiencia y Confianza",
+      title: "Experiencia y confianza",
       subtitle: "Líderes en el mercado argentino de autopartes",
       description:
         "Con presencia en todo el país, ofrecemos soluciones integrales para talleres, distribuidores y usuarios finales.",

@@ -7,13 +7,13 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo from '../public/logo.png'
+import Logo from '../public/logo-balsamo-azul.png'
 
 const brandLogos = [
-  { name: "Aequipe", src: "/marcas/marca_aequipe.svg", href:'https://www.instagram.com/balsamosa/' },
-  { name: "Kreisen", src: "/marcas/marca_kreisen.svg", href:'https://www.instagram.com/balsamosa/'  },
-  { name: "Oxion", src: "/marcas/marca_oxion.svg", href:'https://www.instagram.com/balsamosa/'  },
-  { name: "Tajiro", src: "/marcas/marca_tajiro.svg", href:'https://www.instagram.com/balsamosa/'  },
+  { name: "Aequipe", src: "/marcas/marca_aequipe.png", href:'https://www.instagram.com/balsamosa/' },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.png", href:'https://www.instagram.com/balsamosa/'  },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.png", href:'https://www.instagram.com/balsamosa/'  },
+  { name: "Oxion", src: "/marcas/marca_oxion.png", href:'https://www.instagram.com/balsamosa/'  },
 ]
 
 export function Navbar() {
@@ -48,12 +48,12 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" passHref>
-  <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 cursor-pointer">
-    <div className="bg-primary px-4 py-2 rounded-lg flex items-center justify-center">
+  <motion.div whileHover={{ scale: 1.06 }} className="flex-shrink-0 cursor-pointer">
+    <div className=" px-4 py-2 rounded-lg flex items-center justify-center">
       <Image
         src={Logo}
         alt="Logo BALSAMO"
-        className="object-contain h-6 lg:h-8 w-auto"
+        className="object-contain h-10 lg:h-10 w-auto"
         priority
       />
     </div>
