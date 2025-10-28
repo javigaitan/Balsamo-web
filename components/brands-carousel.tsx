@@ -128,25 +128,27 @@ Nuestra experiencia nos permite brindar una línea completa de repuestos que cub
   className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6"
 >
   {[
-    { category: "Motor", count: "10,000+", icon: "/icons/engine.svg" },
-    { category: "Frenos", count: "2,000+", icon: "/icons/brake.svg" },
-    { category: "Suspensión", count: "4,000+", icon: "/icons/suspension.svg" },
-    { category: "Eléctrico", count: "5,000+", icon: "/icons/electric.svg" },
-    { category: "Transmisión y dirección", count: "3,000+", icon: "/icons/gear.svg" },
-    { category: "Carrocería y Accesorios", count: "14,000+", icon: "/icons/car.svg" },
+    { category: "Motor", count: "10,000+", icon: "/icons/engine.png" },
+    { category: "Frenos", count: "2,000+", icon: "/icons/brake.png" },
+    { category: "Suspensión", count: "4,000+", icon: "/icons/suspension.png" },
+    { category: "Eléctrico", count: "5,000+", icon: "/icons/electric.png" },
+    { category: "Transmisión y dirección", count: "3,000+", icon: "/icons/gear.png" },
+    { category: "Carrocería y Accesorios", count: "14,000+", icon: "/icons/car.png" },
   ].map((item, index) => (
     <div
       key={index}
-      className="text-center p-4 bg-white rounded-xl shadow-sm flex flex-col items-center"
+      className="text-center p-5 bg-white rounded-xl shadow-sm flex flex-col items-center"
     >
       <div className="flex items-center justify-center w-16 h-16 rounded-full  mb-3">
         <img
           src={item.icon}
           alt={item.category}
-          className="h-10 w-10 object-contain text-blue-600"
+          className="h-12 w-12 object-contain text-blue-600" 
         />
       </div>
-      <div className="text-2xl font-bold text-blue-700 mb-1">{item.count}</div>
+<div className="text-2xl font-bold mb-1" style={{ color: "#284E9D" }}>
+  {item.count}
+</div>
       <div className="text-sm text-muted-foreground">{item.category}</div>
     </div>
   ))}
