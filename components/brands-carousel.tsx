@@ -2,6 +2,21 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
+import engineIcon from "@/public/icons/engine.png"
+import brakeIcon from "@/public/icons/brake.png"
+import suspensionIcon from "@/public/icons/suspension.png"
+import electricIcon from "@/public/icons/electric.png"
+import gearIcon from "@/public/icons/gear.png"
+import carIcon from "@/public/icons/car.png"
+
+const categories = [
+  { category: "Motor", count: "10,000+", icon: engineIcon },
+  { category: "Frenos", count: "2,000+", icon: brakeIcon },
+  { category: "Suspensión", count: "4,000+", icon: suspensionIcon },
+  { category: "Eléctrico", count: "5,000+", icon: electricIcon },
+  { category: "Transmisión y dirección", count: "3,000+", icon: gearIcon },
+  { category: "Carrocería y Accesorios", count: "14,000+", icon: carIcon },
+]
 
 
 const brands = [
@@ -127,31 +142,22 @@ Nuestra experiencia nos permite brindar una línea completa de repuestos que cub
   transition={{ duration: 0.8, delay: 0.8 }}
   className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6"
 >
-  {[
-    { category: "Motor", count: "10,000+", icon: "/icons/engine.png" },
-    { category: "Frenos", count: "2,000+", icon: "/icons/brake.png" },
-    { category: "Suspensión", count: "4,000+", icon: "/icons/suspension.png" },
-    { category: "Eléctrico", count: "5,000+", icon: "/icons/electric.png" },
-    { category: "Transmisión y dirección", count: "3,000+", icon: "/icons/gear.png" },
-    { category: "Carrocería y Accesorios", count: "14,000+", icon: "/icons/car.png" },
-  ].map((item, index) => (
-    <div
-      key={index}
-      className="text-center p-5 bg-white rounded-xl shadow-sm flex flex-col items-center"
-    >
-      <div className="flex items-center justify-center w-16 h-16 rounded-full  mb-3">
-        <img
-          src={item.icon}
-          alt={item.category}
-          className="h-12 w-12 object-contain text-blue-600" 
-        />
-      </div>
-<div className="text-2xl font-bold mb-1" style={{ color: "#284E9D" }}>
-  {item.count}
-</div>
-      <div className="text-sm text-muted-foreground">{item.category}</div>
+  {categories.map((item, index) => (
+  <div key={index} className="text-center p-5 bg-white rounded-xl shadow-sm flex flex-col items-center">
+    <div className="flex items-center justify-center w-16 h-16 rounded-full mb-3">
+      <img
+        src={item.icon.src}
+        alt={item.category}
+        className="h-12 w-12 object-contain text-blue-600"
+      />
     </div>
-  ))}
+    <div className="text-2xl font-bold mb-1" style={{ color: "#284E9D" }}>
+      {item.count}
+    </div>
+    <div className="text-sm text-muted-foreground">{item.category}</div>
+  </div>
+))}
+
 </motion.div>
       </div>
     </section>

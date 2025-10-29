@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef } from "react"
+import Link from "next/link"
 import { motion, useInView } from "framer-motion"
 import { ArrowRight, Award, Car, Users, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -69,7 +70,7 @@ export function AboutSection() {
                 className="text-lg text-muted-foreground leading-relaxed text-pretty"
               >
                 Ser especialistas no es solo conocer el repuesto, sino entender el vehículo y las necesidades de quienes trabajan con él.
-En Bálsamo combinamos trayectoria, conocimiento técnico y un servicio humano, que nos permite brindar soluciones precisas, ágiles y confiables.
+                En Bálsamo combinamos trayectoria, conocimiento técnico y un servicio humano, que nos permite brindar soluciones precisas, ágiles y confiables.
 
 
               </motion.p>
@@ -117,17 +118,12 @@ En Bálsamo combinamos trayectoria, conocimiento técnico y un servicio humano, 
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              <Button
-                size="lg"
-                className="group text-base px-6 py-3"
-                onClick={() => {
-                  // Navigate to /about-us page
-                  window.location.href = "/about-us"
-                }}
-              >
-                Conocer Más
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
-              </Button>
+              <Link href="/about-us">
+                <Button size="lg" className="group text-base px-6 py-3 cursor-pointer">
+                  Conocer Más
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200 " />
+                </Button>
+              </Link>
             </motion.div>
           </motion.div>
 
