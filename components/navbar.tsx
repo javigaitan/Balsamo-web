@@ -87,7 +87,6 @@ export function Navbar() {
                   transition={{ duration: 0.2 }}
                   className="opacity-70 hover:opacity-100 transition-opacity duration-200"
                 >
-                  <img src={brand.src || "/placeholder.svg"} alt={brand.name} className="h-8 w-auto object-contain" />
                 </motion.a>
               ))}
             </div>
