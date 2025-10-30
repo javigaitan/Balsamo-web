@@ -136,7 +136,7 @@ export function AboutSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/balsamo-operador.png"
+                src="/img-cajarepuestos.jpg"
                 alt="Interior del almacén de Balsamo Autopartes mostrando organización y variedad de repuestos"
                 className="w-full h-[500px] lg:h-[600px] object-cover"
               />

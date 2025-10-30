@@ -10,7 +10,7 @@ const slides = [
     id: 1,
     type: "image",
     content: {
-      src: "/fotos-banner/banner_01.png",
+      src: "/fotos-banner/img-banner-deposito-1.jpg",
       title: "Calidad que impulsa tu vehículo",
       subtitle: "Más de 50 años brindando repuestos de primera calidad",
       cta: "Ver Catálogo",
@@ -21,7 +21,7 @@ const slides = [
     id: 2,
     type: "image",
     content: {
-      src: "/fotos-banner/banner_05.png",
+      src: "/fotos-banner/img-banner-deposito-2.jpg",
       title: "Tecnología de vanguardia",
       subtitle: "Repuestos originales y alternativos para todas las marcas",
       cta: "Conocer Más",
