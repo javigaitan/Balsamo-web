@@ -60,7 +60,7 @@ export function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-3xl lg:text-4xl font-bold text-foreground text-balance"
               >
-                Líderes en Autopartes desde 1968
+                Líderes en autopartes desde 1968
               </motion.h2>
 
               <motion.p

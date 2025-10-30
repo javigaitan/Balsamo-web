@@ -37,7 +37,7 @@ const slides = [
       subtitle: "Líderes en el mercado argentino de autopartes",
       description:
         "Con presencia en todo el país, ofrecemos soluciones integrales para talleres, distribuidores y usuarios finales.",
-      cta: "Contactanos",
+      cta: "Contáctanos",
       link: "/#contact",
       stats: [
         { number: "50+", label: "Años de experiencia" },
@@ -165,6 +165,7 @@ function VideoSlide({ slide }: { slide: any }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
+          
           <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
             {slide.content.cta}
           </Button>
@@ -205,9 +206,10 @@ function ImageSlide({ slide }: { slide: any }) {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
+            {/*
             <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
               {slide.content.cta}
-            </Button>
+            </Button>*/} {/*Si borras esta linea comentada apareceran los btn en los banner */}
           </motion.div>
         </div>
       </div>
