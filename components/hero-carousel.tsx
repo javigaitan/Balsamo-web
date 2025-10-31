@@ -22,8 +22,8 @@ const slides = [
     type: "image",
     content: {
       src: "/fotos-banner/img-banner-deposito-2.jpg",
-      title: "Tecnología de vanguardia",
-      subtitle: "Repuestos originales y alternativos para todas las marcas",
+      title: "Autopartes confiables para tu vehículo",
+      subtitle: "Renaullt - Volkswagen - Nissas",
       cta: "Conocer Más",
       link: "/",
     },
