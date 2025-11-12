@@ -191,12 +191,12 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                 {
                   icon: Mail,
                   title: "Email",
-                  content: "balsamo@balsamo.com.ar",
+                  content: "ventas@balsamo.com.ar | rrhh@balsamo.com.ar",
                 },
                 {
                   icon: Clock,
                   title: "Horarios",
-                  content: "Lun - Vie: 8:00 - 18:00 | Sáb: 8:00 - 13:00",
+                  content: "Lun - Vie: 8:00 - 17:00",
                 },
               ].map((item, index) => (
                 <motion.div
