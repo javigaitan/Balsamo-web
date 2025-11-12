@@ -10,7 +10,7 @@ const stats = [
     icon: Package,
     number: 50000,
     suffix: "+",
-    label: "Referencias Disponibles",
+    label: "Referencias disponibles",
     description: "Amplio stock de repuestos para Renault, Volkswagen y Nissan",
   },
   {
@@ -18,7 +18,7 @@ const stats = [
     icon: Calendar,
     number: 50,
     suffix: "+",
-    label: "Años de Experiencia",
+    label: "Años de experiencia",
     description: "Más de medio siglo en el mercado de autopartes",
   },
   {
@@ -26,7 +26,7 @@ const stats = [
     icon: MapPin,
     number: 100,
     suffix: "%",
-    label: "Cobertura Nacional",
+    label: "Cobertura nacional",
     description: "Presencia en todo el territorio argentino",
   },
   {
@@ -34,8 +34,8 @@ const stats = [
     icon: TrendingUp,
     number: 20000,
     suffix: "+",
-    label: "Metros Cubiertos",
-    description: "Centro de distribución con +30.000 metros cubiertos",
+    label: "Metros cubiertos",
+    description: "Centro de distribución con +20.000 metros cubiertos",
   },
 ]
 
@@ -107,7 +107,7 @@ export function StatsSection() {
             Especialista en autopartes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-Lideres en la especialización de autopartes para vehiculos Renault, Volkswagen y Nissan
+Lideres en la especialización de autopartes para vehículo Renault, Volkswagen y Nissan
           </p>
         </motion.div>
 

@@ -11,10 +11,10 @@ const slides = [
     type: "image",
     content: {
       src: "/fotos-banner/banner_01.png",
-      title: "Especialista en repuestos del automotor",
-      subtitle: "Más de 50 años brindando repuestos",
-      //cta: "Ver Catálogo",
-      //link: "/",
+      title: "Calidad que impulsa tu vehículo",
+      subtitle: "Más de 50 años brindando repuestos de primera calidad",
+      cta: "Ver Catálogo",
+      link: "/",
     },
   },
   {
@@ -22,10 +22,10 @@ const slides = [
     type: "image",
     content: {
       src: "/fotos-banner/banner_05.png",
-      title: "Repuestos para Renault, Volkswagen y Nissan",
-      subtitle: "Más de 50.000 referencias",
-      //cta: "Conocer Más",
-      //link: "/",
+      title: "Tecnología de vanguardia",
+      subtitle: "Repuestos originales y alternativos para todas las marcas",
+      cta: "Conocer Más",
+      link: "/",
     },
   },
   {
@@ -37,7 +37,7 @@ const slides = [
       subtitle: "Líderes en el mercado argentino de autopartes",
       description:
         "Con presencia en todo el país, ofrecemos soluciones integrales para talleres, distribuidores y usuarios finales.",
-      cta: "Contactanos",
+      cta: "Contáctanos",
       link: "/#contact",
       stats: [
         { number: "50+", label: "Años de experiencia" },
@@ -165,11 +165,9 @@ function VideoSlide({ slide }: { slide: any }) {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {slide.content.cta && (
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-              {slide.content.cta}
-            </Button>
-          )}
+          <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+            {slide.content.cta}
+          </Button>
         </motion.div>
       </div>
     </div>
@@ -207,11 +205,9 @@ function ImageSlide({ slide }: { slide: any }) {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            {slide.content.cta && (
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
-                {slide.content.cta}
-              </Button>
-            )}
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+              {slide.content.cta}
+            </Button>
           </motion.div>
         </div>
       </div>

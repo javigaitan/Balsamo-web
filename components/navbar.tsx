@@ -10,9 +10,9 @@ import Image from "next/image";
 import Logo from '../public/logo-balsamo-azul.png'
 
 const brandLogos = [
-  { name: "Aequipe", src: "/marcas/marca_aequipe.png", href:'https://www.instagram.com/balsamosa/' },
-  { name: "Kreisen", src: "/marcas/marca_kreisen.png", href:'https://www.instagram.com/balsamosa/'  },
-  { name: "Tajiro", src: "/marcas/marca_tajiro.png", href:'https://www.instagram.com/balsamosa/'  },
+  { name: "Aequipe", src: "/marcas/marca_aequipe.png", href:'https://www.instagram.com/aequiperepuestos/' },
+  { name: "Kreisen", src: "/marcas/marca_kreisen.png", href:'https://www.instagram.com/kreisenrepuestos/'  },
+  { name: "Tajiro", src: "/marcas/marca_tajiro.png", href:'https://www.instagram.com/tajirorepuestos/'  },
   { name: "Oxion", src: "/marcas/marca_oxion.png", href:'https://www.instagram.com/balsamosa/'  },
 ]
 

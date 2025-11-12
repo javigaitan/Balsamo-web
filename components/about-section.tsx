@@ -60,7 +60,7 @@ export function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-3xl lg:text-4xl font-bold text-foreground text-balance"
               >
-                Líderes en Autopartes desde 1968
+                Líderes en autopartes desde 1968
               </motion.h2>
 
               <motion.p
@@ -136,7 +136,7 @@ export function AboutSection() {
           >
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
-                src="/balsamo-operador.png"
+                src="/prueba.jpg"
                 alt="Interior del almacén de Balsamo Autopartes mostrando organización y variedad de repuestos"
                 className="w-full h-[500px] lg:h-[600px] object-cover"
               />

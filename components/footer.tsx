@@ -84,7 +84,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">Enlaces rápidos</h3>
             <div className="space-y-2">
               {[
                 { name: "Nosotros", href: "#about" },
@@ -168,7 +168,7 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-slate-400 text-sm text-center md:text-left">
-              <p>&copy; 2025 Balsamo Autopartes. Todos los derechos reservados.</p>
+              <p>&copy; 2025 Balsamo especialista en repuestos del automotor. Todos los derechos reservados.</p>
             </div>
 
             {/* Signature */}

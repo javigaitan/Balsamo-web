@@ -196,7 +196,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                 {
                   icon: Clock,
                   title: "Horarios",
-                  content: "Lun - Vie: 8:00 - 17:00",
+                  content: "Lun - Vie: 8:00 - 18:00 | Sáb: 8:00 - 13:00",
                 },
               ].map((item, index) => (
                 <motion.div

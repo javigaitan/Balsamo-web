@@ -64,7 +64,7 @@ export function BrandsCarousel() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">Marcas de Confianza</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">Marcas de confianza</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
             Trabajamos con las marcas más reconocidas del mercado automotriz mundial
           </p>
@@ -123,7 +123,7 @@ export function BrandsCarousel() {
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-foreground mb-4">Especialistas en Todas las Familias de Piezas</h3>
+            <h3 className="text-xl font-semibold text-foreground mb-4">Especialistas en todas las familias de piezas</h3>
             <p className="text-muted-foreground leading-relaxed">
               En Bálsamo Autopartes ofrecemos soluciones para cada sistema del vehículo, desde los componentes más específicos hasta los más generales.
 Nuestra experiencia nos permite brindar una línea completa de repuestos que cubre todas las familias: motor, frenos, suspensión, transmisión, eléctrico y carrocería.
