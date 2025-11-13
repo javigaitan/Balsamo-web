@@ -156,7 +156,7 @@ function VideoSlide({ slide }: { slide: any }) {
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl lg:text-1xl font-normal mb-8 text-balance"
+          className="text-xl lg:text-2xl mb-8 text-balance"
         >
           {slide.content.subtitle}
         </motion.p>
@@ -196,7 +196,7 @@ function ImageSlide({ slide }: { slide: any }) {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl lg:text-1xl font-normal mb-8 text-balance max-w-2xl"
+            className="text-xl lg:text-2xl mb-8 text-balance max-w-2xl"
           >
             {slide.content.subtitle}
           </motion.p>
@@ -228,7 +228,7 @@ function SvgTextSlide({ slide }: { slide: any }) {
             className="space-y-6"
           >
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground text-balance">{slide.content.title}</h1>
-            <p className="text-xl lg:text-2xl font-normal text-muted-foreground text-balance">{slide.content.subtitle}</p>
+            <p className="text-xl lg:text-2xl text-muted-foreground text-balance">{slide.content.subtitle}</p>
             <p className="text-lg text-muted-foreground leading-relaxed">{slide.content.description}</p>
 
             {/* Stats */}
@@ -252,11 +252,9 @@ function SvgTextSlide({ slide }: { slide: any }) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              {slide.content.cta && slide.content.link && (
-                <Button size="lg" className="text-lg px-8 py-3" asChild>
-                  <a href={slide.content.link}>{slide.content.cta}</a>
-                </Button>
-              )}
+              <Button size="lg" className="text-lg px-8 py-3" asChild>
+                <a href={slide.content.link}>{slide.content.cta}</a>
+              </Button>
             </motion.div>
           </motion.div>
 

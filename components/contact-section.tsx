@@ -191,7 +191,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                 {
                   icon: Mail,
                   title: "Email",
-                  content: "ventas@balsamo.com.ar | rrhh@balsamo.com.ar",
+                  content: "balsamo@balsamo.com.ar",
                 },
                 {
                   icon: Clock,
