@@ -12,7 +12,7 @@ const oswald = Oswald({
 })
 
 export const metadata: Metadata = {
-  title: "Balsamo Autopartes - Repuestos de Calidad",
+  title: "Balsamo - Especialista en repuestos del automotor",
   description:
     "Líder en autopartes con más de 50 años de experiencia. Encuentra repuestos de calidad para tu vehículo.",
   keywords: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     apple: "/logobalsamo-icon.png",
   },
   openGraph: {
-    title: "Balsamo Autopartes - Repuestos de Calidad",
+    title: "Balsamo - Especialista en repuestos del automotor",
     description:
       "Líder en autopartes con más de 25 años de experiencia. Encuentra repuestos de calidad para tu vehículo.",
     url: "https://www.balsamo.com.ar/",

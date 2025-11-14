@@ -10,7 +10,7 @@ const slides = [
     id: 1,
     type: "image",
     content: {
-      src: "/fotos-banner/banner_01.png",
+      src: "/fotos-banner/img-banner-deposito-1.jpg",
       title: "Especialista en repuestos del automotor",
       subtitle: "Más de 50 años brindando repuestos",
       //cta: "Ver Catálogo",
@@ -21,7 +21,7 @@ const slides = [
     id: 2,
     type: "image",
     content: {
-      src: "/fotos-banner/banner_05.png",
+      src: "/fotos-banner/img-banner-deposito-2.jpg",
       title: "Repuestos para Renault, Volkswagen y Nissan",
       subtitle: "Más de 50.000 referencias",
       //cta: "Conocer Más",
