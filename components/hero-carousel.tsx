@@ -11,8 +11,8 @@ const slides = [
     type: "image",
     content: {
       src: "/fotos-banner/img-banner-deposito-1.jpg",
-      title: "Especialista en repuestos del automotor",
-      subtitle: "Más de 50 años brindando repuestos",
+      title: "Distribuidor mayorista de repuestos del automotor",
+      subtitle: "Repuestos para Renault, Volkswagen y Nissan",
       //cta: "Ver Catálogo",
       //link: "/",
     },
