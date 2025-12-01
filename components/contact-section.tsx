@@ -17,7 +17,6 @@ type FormType = "customer" | "company"
 interface CustomerFormData {
   name: string
   email: string
-  tradeName: "Consumidor Final"
   phone: string
   comment: string
 }
