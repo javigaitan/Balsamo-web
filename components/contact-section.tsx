@@ -34,6 +34,7 @@ interface CompanyFormData {
   hasShop: string
   hasShopOtherDetails?: string
   companyForm: any
+  companycomment:string
 }
 
 const provinces = [
@@ -241,7 +242,9 @@ const onSubmitCompany = async (data: CompanyFormData) => {
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white rounded-2xl shadow-xl p-8"
+            className={`bg-white rounded-2xl shadow-xl p-8 transition-all duration-500 ${
+              formType === "company" ? "min-h-[1000px]" : "min-h-[300px]"
+            }`}
           >
             {/* Form Type Selector */}
             <div className="mb-8">
@@ -255,7 +258,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                   }`}
                 >
                   <User className="w-4 h-4" />
-                  <span className="font-medium">Soy consumidor final</span>
+                  <span className="font-medium">Soy cliente final</span>
                 </button>
                 <button
                   onClick={() => setFormType("company")}
@@ -364,7 +367,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="company-name">Nombre y apellido</Label>
+                    <Label htmlFor="company-name">Nombre</Label>
                     <Input
                       id="company-name"
                       {...companyForm.register("name", { required: "Este campo es requerido" })}
@@ -494,23 +497,15 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                 </div>
 
                 <div>
-                  <Label htmlFor="company-shop">¿Cuenta con un local comercial de venta de repuestos?</Label>
-                  <Select
-                    onValueChange={(value) => {
-                      companyForm.setValue("hasShop", value)
-                      setShowOtherShopDetails(value === "other")
-                      if (value !== "other") {
-                        companyForm.setValue("hasShopOtherDetails", "")
-                      }
-                    }}
-                  >
+                  <Label htmlFor="company-shop">¿Tienes un taller de repuestos?</Label>
+                  <Select onValueChange={(value) => companyForm.setValue("hasShop", value)}>
                     <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Seleccionar opción" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="yes">Si, cuento con una casa de repuestos</SelectItem>
-                      <SelectItem value="planning">No, estoy pensando abrir un local</SelectItem>
-                      <SelectItem value="other">Otros</SelectItem>
+                      <SelectItem value="yes">Sí, tengo un taller de repuestos</SelectItem>
+                      <SelectItem value="planning">No, pero planeo abrir uno</SelectItem>
+                      <SelectItem value="other">Otro</SelectItem>
                     </SelectContent>
                   </Select>
                   {companyForm.formState.errors.hasShop && (
@@ -518,30 +513,21 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                   )}
                 </div>
 
-                {showOtherShopDetails && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Label htmlFor="company-shop-other">Por favor, especifique</Label>
-                    <Textarea
-                      id="company-shop-other"
-                      {...companyForm.register("hasShopOtherDetails", {
-                        required: showOtherShopDetails ? "Este campo es requerido cuando selecciona 'Otros'" : false,
-                      })}
-                      rows={3}
-                      className="mt-1"
-                      placeholder="Describa su situación..."
-                    />
-                    {companyForm.formState.errors.hasShopOtherDetails && (
-                      <p className="text-sm text-destructive mt-1">
-                        {companyForm.formState.errors.hasShopOtherDetails.message}
-                      </p>
-                    )}
-                  </motion.div>
-                )}
+                <div>
+                  <Label htmlFor="company-comment">Comentarios adicionales</Label>
+                  <Textarea
+                    id="company-comment"
+                    {...companyForm.register("companycomment", { required: "Este campo es requerido" })}
+                    rows={4}
+                    className="mt-1"
+                    placeholder="Cuéntanos un poco sobre ustedes"
+                  />
+                  {companyForm.formState.errors.companycomment && (
+                    <p className="text-sm text-destructive mt-1">
+                      {companyForm.formState.errors.companycomment.message}
+                    </p>
+                  )}
+                </div>
 
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
                   {isSubmitting ? (
