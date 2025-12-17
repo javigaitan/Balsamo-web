@@ -91,13 +91,15 @@ export function Footer() {
                 { name: "Productos", href: "#products" },
                 { name: "Infobal 10", href: "https://distribuidores-infobal.infobalbsa.com.ar/" },
                 { name: "Contacto", href: "#contact" },
+                { name: "Formulario de devolución", href: "/formularios/Formulario de devolución-BALSAMO.pdf", download: true },
                 { name: "Términos y Condiciones", href: "#terms" },
                 { name: "Política de Privacidad", href: "#privacy" },
               ].map((link) => (
                 <motion.a
                   key={link.name}
-                  href={link.href}
-                  whileHover={{ x: 5 }}
+    href={link.href}
+    {...(link.download ? { download: link.name } : {})}
+    whileHover={{ x: 5 }}
                   className="block text-slate-300 hover:text-secondary transition-colors duration-200 text-sm"
                 >
                   {link.name}
