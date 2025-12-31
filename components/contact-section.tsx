@@ -258,7 +258,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                   }`}
                 >
                   <User className="w-4 h-4" />
-                  <span className="font-medium">Soy cliente final</span>
+                  <span className="font-medium">Consulta Particular</span>
                 </button>
                 <button
                   onClick={() => setFormType("company")}
@@ -269,7 +269,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                   }`}
                 >
                   <Building className="w-4 h-4" />
-                  <span className="font-medium">Soy empresa</span>
+                  <span className="font-medium">Ventas Mayoristas</span>
                 </button>
               </div>
             </div>
@@ -497,13 +497,13 @@ const onSubmitCompany = async (data: CompanyFormData) => {
                 </div>
 
                 <div>
-                  <Label htmlFor="company-shop">¿Tienes un taller de repuestos?</Label>
+                  <Label htmlFor="company-shop">¿Tenes una casa de repuestos?</Label>
                   <Select onValueChange={(value) => companyForm.setValue("hasShop", value)}>
                     <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Seleccionar opción" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="yes">Sí, tengo un taller de repuestos</SelectItem>
+                      <SelectItem value="yes">Sí, tengo una casa de repuestos</SelectItem>
                       <SelectItem value="planning">No, pero planeo abrir uno</SelectItem>
                       <SelectItem value="other">Otro</SelectItem>
                     </SelectContent>
