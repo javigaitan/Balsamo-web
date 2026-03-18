@@ -88,12 +88,10 @@ export function Footer() {
             <div className="space-y-2">
               {[
                 { name: "Nosotros", href: "#about" },
-                { name: "Productos", href: "#products" },
                 { name: "Infobal 10", href: "https://distribuidores-infobal.infobalbsa.com.ar/" },
                 { name: "Contacto", href: "#contact" },
                 { name: "Formulario de devolución", href: "/formularios/Formulario de devolución-BALSAMO.pdf", download: true },
-                { name: "Términos y Condiciones", href: "#terms" },
-                { name: "Política de Privacidad", href: "#privacy" },
+               
               ].map((link) => (
                 <motion.a
                   key={link.name}
@@ -179,7 +177,7 @@ export function Footer() {
   className="text-slate-500 text-xs text-center md:text-right"
 >
   <a
-    href="https://wa.me/3512075102?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20soluciones%20y%20desarrollos%20web
+    href="https://wa.me/5493512075102?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20soluciones%20y%20desarrollos%20web
 " // 
     target="_blank"
     rel="noopener noreferrer"
