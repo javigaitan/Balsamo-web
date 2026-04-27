@@ -131,7 +131,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       { 
         ...data, 
-        form_type: "Empresa"
+        form_type: "Empresa",
         from_name: "Balsamo"
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
