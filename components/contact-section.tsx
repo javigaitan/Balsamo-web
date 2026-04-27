@@ -15,6 +15,7 @@ import Swal from "sweetalert2"
 type FormType = "customer" | "company"
 
 interface CustomerFormData {
+  from_name:string
   name: string
   email: string
   phone: string
@@ -94,7 +95,8 @@ export function ContactSection() {
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       { 
         ...data, 
-        form_type: "Consumidor Final"
+        form_type: "Consumidor Final",
+        from_name: "Balsamo"
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
@@ -130,6 +132,7 @@ const onSubmitCompany = async (data: CompanyFormData) => {
       { 
         ...data, 
         form_type: "Empresa"
+        from_name: "Balsamo"
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     )
